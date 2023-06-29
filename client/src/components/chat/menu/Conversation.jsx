@@ -8,7 +8,6 @@ const Component = styled(Box)`
   display: flex;
   height: 65px;
   cursor: pointer;
-  // align-items: center;
   padding: 13px 0;
 `;
 
@@ -62,12 +61,12 @@ const Conversation = ({ user }) => {
           <Image src={user.picture} alt="" />
         </Box>
         <Box>{user.name}</Box>
-        <Box style={{ overflow: "hidden" }}>
+        {/* <Box style={{ overflow: "hidden" }}>
           <Text>
             {message?.text?.includes("localhost") ? "media" : message?.text[0]}
           </Text>
-        </Box>
-        <Box style={{ width: "40px" }}>
+        </Box> */}
+        <Box style={{ display: "flex", width: "40px", marginLeft: "auto" }}>
           <Container>
             {message?.text && <Time>{formatDate(message?.timestamp)}</Time>}
           </Container>
